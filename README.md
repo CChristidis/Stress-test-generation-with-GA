@@ -1,7 +1,7 @@
 # Stress-test-generation-with-Genetic-Algorithm
 
 ## About:
-The script takes as input a .txt file that describes a circuit consisting of elementary gates (AND, NAND, OR, NOR, NOT, NOR, XNOR). 
+The script takes as input a .txt file that describes a circuit consisting of elementary gates (AND, NAND, OR, NOR, NOT, NOR, XNOR). The pipeline of the scripts consists of sorting the circuit according to the inputs provided for every element, the calculation of 
 
 ## Input file structure:
 • The first line of the .txt file describes the input level signals. Consider the example given below describing the .txt input file structure for a simple circuit.
