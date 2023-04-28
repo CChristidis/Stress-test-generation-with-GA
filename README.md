@@ -5,15 +5,15 @@ The script takes as input a .txt file that describes a circuit consisting of ele
 
 ## How does the genetic algorithm work?:
 
-**1)** Initial population (seed):
+**1)** Initial population (seed): <br>
 Workload: time series of input values of the circuit. 
 
-Algorithm parameters:
-• Workload length L: The size of a time series, measured as the number of input vectors (default: L=2).
-• Population size N: the number of distinct workloads that the algorithm will explore at each step.
-Initially, we start with a population of N random workloads. Each distinct workload (individual workload) is a time series of length L.
-For example, if N=4 and L=3:
-![image](https://user-images.githubusercontent.com/48795138/235257433-3cfdfa49-f1ea-454a-b344-3595144b758b.png)
+Algorithm parameters: <br>
+• Workload length L: The size of a time series, measured as the number of input vectors (default: L=2).  <br>
+• Population size N: the number of distinct workloads that the algorithm will explore at each step.  <br>
+Initially, we start with a population of N random workloads. Each distinct workload (individual workload) is a time series of length L.  <br>
+For example, if N=4 and L=3: <br>
+![image](https://user-images.githubusercontent.com/48795138/235257433-3cfdfa49-f1ea-454a-b344-3595144b758b.png) <br>
 
 ## Input file structure:
 • The first line of the .txt file describes the input level signals. Consider the example given below describing the .txt input file structure for a simple circuit.
