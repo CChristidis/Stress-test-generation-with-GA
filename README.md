@@ -28,7 +28,7 @@ At this stage, we select from the population as parents the two individuals who 
 From the 2 selected parents from step 3), we generate a new population. In the newly generated population by default 2 of the members are the 2 parents that produced the population because 1. so far they provide the best result and 2. we are not yet sure that their offspring will have a better result. <br><br>
 
 **5) Mutation**: <br>
-
+With a very small probability, called the mutation rate m, we change the bits of the offspring generated from the crossover in the previous step. We do not mutate the two parents of the generation. The value of m can be very small, in our occassion m is equal to **0.05**, i.e. 5% probability of mutation for every bit.
 
 ## Input file structure:
 • The first line of the .txt file describes the input level signals. Consider the example given below describing the .txt input file structure for a simple circuit.
