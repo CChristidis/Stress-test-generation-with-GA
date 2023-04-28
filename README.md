@@ -41,3 +41,6 @@ In this step we calculate the switching activity for every individual workload o
 
 ![Screenshot 2023-04-28 233710](https://user-images.githubusercontent.com/48795138/235249654-aa63e40f-8aa7-42b0-8235-c16ea10becc4.png)
 
+# Example:
+![image](https://user-images.githubusercontent.com/48795138/235258860-58642050-72f9-41a2-a4e7-fc504b4365bb.png)
+
