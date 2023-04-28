@@ -16,11 +16,10 @@ The script takes as input a .txt file that describes a circuit consisting of ele
 2) t1, t2, ..., tn: intermediate level inputs. Elements with these kind of inputs are elements contained in every level of the circuit that is not the input level.
 3) o1, o2, ..., on: the outputs of the circuit. 
 
-### Described circuit:
+### Example circuit:
 ![Screenshot 2023-04-28 230841](https://user-images.githubusercontent.com/48795138/235244030-37d9ff24-a4c5-4b13-ade0-1a6bf3598aff.png)
 
-### Corresponding input file structure:
+### Corresponding input file structure for example circuit:
 
+![Screenshot 2023-04-28 233710](https://user-images.githubusercontent.com/48795138/235249654-aa63e40f-8aa7-42b0-8235-c16ea10becc4.png)
 
-![my_plot](https://user-images.githubusercontent.com/48795138/235240263-b75c4634-98eb-449
-f-b275-175f9b920f8e.jpg)
