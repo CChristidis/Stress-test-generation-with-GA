@@ -16,6 +16,10 @@ For example, if L=2, the structure of a (random) workload can be: <br>
 ![image](https://user-images.githubusercontent.com/48795138/235257964-e4cb2308-e932-48d6-ac9e-7080d4df5350.png) <br><br>
 
 
+**2) Calculation of the switching activity**:
+In this step we calculate the switching activity for every individual workload of the current generation, defined as: <br>
+switching_activity(i) = absolute number of switches on the components of the circuit induced by individual workload i.
+
 ## Input file structure:
 • The first line of the .txt file describes the input level signals. Consider the example given below describing the .txt input file structure for a simple circuit.
 • The file is not necessarily sorted. The script sorts the file considering inputs and outputs provided.
