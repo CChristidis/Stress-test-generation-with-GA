@@ -6,7 +6,7 @@ The script takes as input a .txt file that describes a circuit consisting of ele
 ## How does the genetic algorithm work?:
 
 1) Initial population (seed):
-Workload: time series of input values of the circuit.
+Workload: time series of input values of the circuit. 
 
 Algorithm parameters:
 • Workload length L: The size of a time series, measured as the number of input vectors (default: L=2).
