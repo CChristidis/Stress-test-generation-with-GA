@@ -21,7 +21,7 @@ In this step we calculate the switching activity for every individual workload o
 • switching_activity(i) = absolute number of switches on the components of the circuit induced by individual workload i. <br><br>
 
 
-** 3) Selection: **: <br> 
+**3) Selection:**: <br> 
 At this stage, we select from the population as parents the two individuals who achieve the highest switching activity. <br> <br>
 
 ** 4) Crossover**: <br>
