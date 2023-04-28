@@ -1,7 +1,19 @@
 # Stress-test-generation-with-Genetic-Algorithm
 
 ## About:
-The script takes as input a .txt file that describes a circuit consisting of elementary gates (AND, NAND, OR, NOR, NOT, NOR, XNOR). The pipeline of the scripts consists of sorting the circuit according to the inputs provided for every element, the calculation of 
+The script takes as input a .txt file that describes a circuit consisting of elementary gates (AND, NAND, OR, NOR, NOT, NOR, XNOR). The pipeline of the scripts consists of sorting the circuit according to the inputs provided for every element, the calculation of two states that produce the greatest switching activity on the circuit using a genetic algorithm for 3 individual runs and plotting the greatest switching activity for each generation, for each individual run. 
+
+## How does the genetic algorithm work?:
+
+1) Initial population (seed):
+Workload: time series of input values of the circuit.
+
+Algorithm parameters:
+• Workload length L: The size of a time series, measured as the number of input vectors (default: L=2).
+• Population size N: the number of distinct workloads that the algorithm will explore at each step.
+Initially, we start with a population of N random workloads. Each distinct workload (individual workload) is a time series of length L.
+For example, if N=4 and L=3:
+![image](https://user-images.githubusercontent.com/48795138/235257433-3cfdfa49-f1ea-454a-b344-3595144b758b.png)
 
 ## Input file structure:
 • The first line of the .txt file describes the input level signals. Consider the example given below describing the .txt input file structure for a simple circuit.
