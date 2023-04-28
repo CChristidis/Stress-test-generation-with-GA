@@ -10,14 +10,11 @@ The script takes as input a .txt file that describes a circuit consisting of ele
 > where:    n=1, if gate_type == "NOT" <br>
           n∈[2, +∞], else. 
           
-$\left{
-\begin{array}{ll}
-(1-p)^{n-1}(1-p+p(\alpha + \beta)^{2})^{n-1} & 0\leq x \leq \beta \
-(1-p)^{n-1}(1-p+4p\alpha\beta)^{n-1} & \beta\leq x\leq \beta-1\
-(1-p)^{n-1} (1-p(\alpha - \beta)^{2})^{n-1} & 1-\beta\leq x\leq 1 \
-\end{array}
-\right.$
-
+{% if gate_type == "NOT" %}
+n = 1
+{% else %}
+n = 2  # You can set any value here for n > 1
+{% endif %}
 **Note:** The structure of the circuit **is not sequentially desrcibed from the .txt input file**. This means that an element placed above another one in the .txt file does not necessarily mean that belongs to a lower level in the circuit. The corresponding level of every element is determined from the it's input. Below, the list of the types of inputs based on their syntax in the .txt file:
 1) i1, i2, ..., in: input level inputs. Elements with these kind of inputs are elements contained in the first level of the circuit.
 2) t1, t2, ..., tn: intermediate level inputs. Elements with these kind of inputs are elements contained in every level of the circuit that is not the input level.
