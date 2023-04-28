@@ -6,7 +6,7 @@ The script takes as input a .txt file that describes a circuit consisting of ele
 ## How does the genetic algorithm work?:
 
 **1) Initial population (seed)**: <br>
-Workload: time series of input values of the circuit. 
+• Workload: time series of input values of the circuit. 
 
 Algorithm parameters: <br>
 • Workload length L: The size of a time series, measured as the number of input vectors (default: L=2).  <br>
@@ -18,7 +18,7 @@ For example, if L=2, the structure of a (random) workload can be: <br>
 
 **2) Calculation of the switching activity**:
 In this step we calculate the switching activity for every individual workload of the current generation, defined as: <br>
-switching_activity(i) = absolute number of switches on the components of the circuit induced by individual workload i.
+• switching_activity(i) = absolute number of switches on the components of the circuit induced by individual workload i.
 
 ## Input file structure:
 • The first line of the .txt file describes the input level signals. Consider the example given below describing the .txt input file structure for a simple circuit.
