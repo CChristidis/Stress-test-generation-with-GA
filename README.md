@@ -21,13 +21,13 @@ In this step we calculate the switching activity for every individual workload o
 • switching_activity(i) = absolute number of switches on the components of the circuit induced by individual workload i. <br><br>
 
 
-**3) Selection:**: <br> 
-At this stage, we select from the population as parents the two individuals who achieve the highest switching activity. <br> <br>
+**3) Selection:** <br> 
+At this stage, we select from the population as parents the two individuals who achieve the highest switching activity. <br><br>
 
-** 4) Crossover**: <br>
+**4) Crossover**: <br>
 From the 2 selected parents from step 3), we generate a new population. In the newly generated population by default 2 of the members are the 2 parents that produced the population because 1. so far they provide the best result and 2. we are not yet sure that their offspring will have a better result. <br><br>
 
-** 5) Mutation**: <br>
+**5) Mutation**: <br>
 
 
 ## Input file structure:
