@@ -12,7 +12,7 @@ Algorithm parameters: <br>
 • Workload length L: The size of a time series, measured as the number of input vectors (default: L=2).  <br>
 • Population size N: the number of distinct workloads that the algorithm will explore at each step.  <br><br>
 Initially, we start with a population of N random workloads. Each distinct workload (individual workload) is a time series of length L.  <br><br>
-For example, if N=4 and L=3, the structure of a (random) workload can be: <br><br>
+For example, if N=4 and L=3, the structure of a (random) workload can be: <br>
 ![image](https://user-images.githubusercontent.com/48795138/235257644-b36494d3-b319-46d0-a378-a0c3e40f1ddc.png) <br><br>
 
 ## Input file structure:
