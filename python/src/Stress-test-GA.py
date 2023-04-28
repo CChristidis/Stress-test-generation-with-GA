@@ -511,12 +511,19 @@ def crossover(num_individuals, parent1, parent2, score1: int, score2: int):
 
 def main():       
     list_scoreGs = []
+    parents1 = []
+
+    
     for i in range(3):
         (parent1, parent2, score1, score2) = find_first_parents(2000)  # seed
         scoreGs = []
         for j in range(100):
             (parent1, parent2, score1, score2) = crossover(30, parent1, parent2, score1, score2)
             scoreGs.append(score1)
+            
+            if j == 99:
+                parents1.append(parent1)
+                
         list_scoreGs.append(scoreGs)
  
     x_axis = [i for i in range(1, 101)]
@@ -524,13 +531,19 @@ def main():
     plt.xlabel("Generation")
     plt.ylabel("Number of switches")
     
-    plt.plot(x_axis, list_scoreGs[0], color='r')
-    plt.plot(x_axis, list_scoreGs[1], color='g')
-    plt.plot(x_axis, list_scoreGs[2], color='b')
+    line1, = plt.plot(x_axis, list_scoreGs[0], color='r', label='Run 1')
+    line2, = plt.plot(x_axis, list_scoreGs[1], color='g', label='Run 2')
+    line3, = plt.plot(x_axis, list_scoreGs[2], color='b', label='Run 3')
     
+    plt.legend(handles=[line1, line2, line3])
+
     plt.show()
+    
+    for i in range(3):
+        print("The two states that produce the greatest switching activity when switching from one to another for run no.{} is:".format(str(i+1)))
+        print(parents1[i][0])
+        print(parents1[i][1])
 
         
 if __name__ == "__main__":
     main() 
-    
