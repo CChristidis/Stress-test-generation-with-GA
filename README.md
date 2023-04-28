@@ -1,1 +1,1 @@
-# Stress-test-generation-with-GA
+# Stress-test-generation-with-Genetic-Algorithm
