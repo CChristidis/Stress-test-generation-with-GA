@@ -1,7 +1,7 @@
 # Stress-test-generation-with-Genetic-Algorithm
 
 ## About:
-The script takes as input a .txt file that describes a circuit consisting of elementary gates (AND, NAND, OR, NOR, NOT, NOR, XNOR). The pipeline of the scripts consists of sorting the circuit according to the inputs provided for every element, the calculation of two states that produce the greatest switching activity on the circuit using a genetic algorithm for 3 individual runs and plotting the greatest switching activity for each generation, for each individual run. 
+The script takes as input a .txt file that describes a circuit consisting of elementary gates (AND, NAND, OR, NOR, NOT, NOR, XNOR). The pipeline of the script consists of sorting the circuit according to the inputs provided for every element, the calculation of two states that produce the greatest switching activity on the circuit using a genetic algorithm for 3 individual runs and plotting the greatest switching activity for each generation, for each individual run. 
 
 ## How does the genetic algorithm work?:
 
