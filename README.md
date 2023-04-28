@@ -31,8 +31,8 @@ From the 2 selected parents from step 3), we generate a new population. In the n
 With a very small probability, called the mutation rate m, we change the bits of the offspring generated from the crossover in the previous step. We do not mutate the two parents of the generation. The value of m can be very small, in our occassion m is equal to **0.05**, i.e. **5% probability of mutation for every bit**.
 
 ## Input file structure:
-• The first line of the .txt file describes the input level signals. Consider the example given below describing the .txt input file structure for a simple circuit.
-• The file is not necessarily sorted. The script sorts the file considering inputs and outputs provided.
+• The first line of the .txt file describes the input level signals. Consider the example given below describing the .txt input file structure for a simple circuit. <br>
+• The file is not necessarily sorted. The script sorts the file considering inputs and outputs provided.<br>
 • Every row has necessarily the following structure: gate_type, output_id, input1_id, input2_id, input3_id, ..., inputn_id, <br>
 > where:    n=1, if gate_type == "NOT" <br>
           n∈[2, +∞], else. 
