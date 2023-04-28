@@ -9,7 +9,7 @@ The script takes as input a .txt file that describes a circuit consisting of ele
 Workload: time series of input values of the circuit. 
 
 Algorithm parameters: <br>
-• Workload length L: The size of a time series, measured as the number of input vectors (default: L=2).  <br><br>
+• Workload length L: The size of a time series, measured as the number of input vectors (default: L=2).  <br>
 • Population size N: the number of distinct workloads that the algorithm will explore at each step.  <br><br>
 Initially, we start with a population of N random workloads. Each distinct workload (individual workload) is a time series of length L.  <br><br>
 For example, if N=4 and L=3, the structure of a (random) workload can be: <br><br>
