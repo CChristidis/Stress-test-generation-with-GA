@@ -13,7 +13,7 @@ Algorithm parameters: <br>
 • Population size N: the number of distinct workloads that the algorithm will explore at each step.  <br><br>
 Initially, we start with a population of N random workloads. Each distinct workload (individual workload) is a time series of length L.  <br><br>
 For example, if L=2, the structure of a (random) workload can be: <br>
-![image](https://user-images.githubusercontent.com/48795138/235257964-e4cb2308-e932-48d6-ac9e-7080d4df5350.png) <br><br>
+![image](https://user-images.githubusercontent.com/48795138/235300338-28d8b95f-6cdb-4dc4-85b0-fed76af3a0ad.png) <br><br>
 
 
 **2) Calculation of the switching activity**: <br>
