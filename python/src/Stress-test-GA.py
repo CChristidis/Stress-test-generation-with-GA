@@ -4,7 +4,6 @@ import statistics
 import random
 import numpy as np
 
-
 circuit_inputs = []  # top inputs
 output_gates_names = [] 
 output_gates = []
@@ -384,18 +383,13 @@ def cloned_individuals(individual1, individual2):
 def mutate(offsprings, mutation_rate=0.05):
     mutated_offsprings = []
     for offspring in offsprings:
-        mutated_offspring = []
-        for individual in offspring:
-            mutated_individual = []
-            for bit in individual:
-                if random.uniform(0, 1.0) <= mutation_rate:
-                    mutated_individual.append(1 - bit)
-                else:
-                    mutated_individual.append(bit)
-            mutated_offspring.append(mutated_individual)
-        mutated_offsprings.append(mutated_offspring)
+        offspring_array = np.array(offspring)
+        # create a mask of bits to flip
+        mask = np.random.binomial(1, mutation_rate, size=offspring_array.shape)
+        # flip the masked bits
+        mutated_offspring = np.abs(offspring_array - mask)
+        mutated_offsprings.append(mutated_offspring.tolist())
     return mutated_offsprings
-
 
 def calculate_score(individual: list, L=2):
     # L: number of individuals (workloads) in a single stress-test
@@ -496,7 +490,8 @@ def crossover(num_individuals, parent1, parent2, score1: int, score2: int):
 def main():       
     list_scoreGs = []
     parents1 = []
-
+    
+    
     
     for i in range(3):
         (parent1, parent2, score1, score2) = find_first_parents(2000)  # seed
@@ -510,7 +505,7 @@ def main():
                 
         list_scoreGs.append(scoreGs)
  
-    x_axis = [i for i in range(1, 101)]
+    x_axis = [i for i in range(a1, 101)]
     plt.title("Best score for each generation of 30 individuals.")
     plt.xlabel("Generation")
     plt.ylabel("Number of switches")
@@ -527,7 +522,8 @@ def main():
         print("The two states that produce the greatest switching activity when switching from one to another for run no.{} is:".format(str(i+1)))
         print(parents1[i][0])
         print(parents1[i][1])
-
-
+        
+    
+        
 if __name__ == "__main__":
     main() 
