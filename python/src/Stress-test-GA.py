@@ -2,6 +2,8 @@ import sys
 import matplotlib.pyplot as plt
 import statistics
 import random
+import numpy as np
+
 
 circuit_inputs = []  # top inputs
 output_gates_names = [] 
@@ -380,14 +382,20 @@ def cloned_individuals(individual1, individual2):
 
 
 def mutate(offsprings, mutation_rate=0.05):
+    mutated_offsprings = []
     for offspring in offsprings:
+        mutated_offspring = []
         for individual in offspring:
-            for idx, bit in enumerate(individual):
-                mutation_prob = random.uniform(0, 1.0)
-                if mutation_prob <= mutation_rate:
-                    individual[idx] = 1 - individual[idx]
-                    
-    return offsprings     
+            mutated_individual = []
+            for bit in individual:
+                if random.uniform(0, 1.0) <= mutation_rate:
+                    mutated_individual.append(1 - bit)
+                else:
+                    mutated_individual.append(bit)
+            mutated_offspring.append(mutated_individual)
+        mutated_offsprings.append(mutated_offspring)
+    return mutated_offsprings
+
 
 def calculate_score(individual: list, L=2):
     # L: number of individuals (workloads) in a single stress-test
@@ -520,6 +528,6 @@ def main():
         print(parents1[i][0])
         print(parents1[i][1])
 
-        
+
 if __name__ == "__main__":
     main() 
