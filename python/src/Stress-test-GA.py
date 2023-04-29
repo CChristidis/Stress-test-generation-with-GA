@@ -383,7 +383,7 @@ def cloned_individuals(individual1, individual2):
 def mutate(offsprings, mutation_rate=0.05):
     '''
     np.random.binomial(n, p, size=offspring_array.shape): Draw (random) samples from a binomial distribution, in the shape
-    of offsping_array np array.
+    of offsping_array np array. (n trials, p probability of success a.k.a probability of bit mutation)
     '''
     mutated_offsprings = []
     
