@@ -381,14 +381,18 @@ def cloned_individuals(individual1, individual2):
 
 
 def mutate(offsprings, mutation_rate=0.05):
+    '''
+    np.random.binomial(n, p, size=offspring_array.shape): Draw (random) samples from a binomial distribution, in the shape
+    of offsping_array np array.
+    '''
     mutated_offsprings = []
+    
     for offspring in offsprings:
         offspring_array = np.array(offspring)
-        # create a mask of bits to flip
         mask = np.random.binomial(1, mutation_rate, size=offspring_array.shape)
-        # flip the masked bits
         mutated_offspring = np.abs(offspring_array - mask)
         mutated_offsprings.append(mutated_offspring.tolist())
+        
     return mutated_offsprings
 
 def calculate_score(individual: list, L=2):
@@ -505,7 +509,7 @@ def main():
                 
         list_scoreGs.append(scoreGs)
  
-    x_axis = [i for i in range(a1, 101)]
+    x_axis = [i for i in range(1, 101)]
     plt.title("Best score for each generation of 30 individuals.")
     plt.xlabel("Generation")
     plt.ylabel("Number of switches")
