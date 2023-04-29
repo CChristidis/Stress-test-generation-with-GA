@@ -15,7 +15,7 @@ Initially, we start with a population of N random workloads. Each distinct workl
 For example, if L=2, the structure of a (random) workload can be: <br>
 ![image](https://user-images.githubusercontent.com/48795138/235300338-28d8b95f-6cdb-4dc4-85b0-fed76af3a0ad.png) <br><br>
 • At t1 < t2, the input of the circuit is [a=1, b=0, c=1] <br>
-• At t2 < t1, the input of the circuit is [a=1, b=0, c=1] <br>
+• At t2 < t1, the input of the circuit is [a=0, b=0, c=1] <br>
 We need to figure out what is the switching activity of the circuit after t2 is given as input.
 
 **2) Calculation of the switching activity**: <br>
