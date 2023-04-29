@@ -95,18 +95,9 @@ def check_file_type(first_line):
 
 def weed_line(line):    
     line = line.replace('\n', '')
-    
     gate_type = line.partition('(')[0]
-  
-    #line = line.partition('(')[2]
-    #line = line[:-1]
-    #line = line.replace(' ', '') 
     line = line.split(" ")
-    #line.insert(0, gate_type)
 
-    # line[0] <=> type
-    # line[2:len(line)] <=> input signals 
-    # line[1] <=> output signal 
     return line
 
 def get_common_elements(input_signal_list, outputs_memory):
