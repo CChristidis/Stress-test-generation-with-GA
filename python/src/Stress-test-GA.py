@@ -8,22 +8,7 @@ output_gates_names = []
 output_gates = []
 
 def generate_truthtable(n: int):
-    truth_table = [[0] * n for i in range(2 ** n)]
-    
-    modulo = 1
-    for i in range(n):
-        counter = 0
-        for j in range(2 ** n):
-            if counter == 2 * modulo:
-                counter = 0
-            if counter >= modulo:
-                truth_table[j][i] = 1
-            else:
-                truth_table[j][i] = 0
-            counter += 1
-        
-        modulo *= 2
-        
+    truth_table = [[(j >> i) & 1 for i in range(n)] for j in range(2**n)]
     truth_table = [i[::-1] for i in truth_table]
     return truth_table
 
